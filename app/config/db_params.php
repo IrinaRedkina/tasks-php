@@ -2,7 +2,7 @@
 
 return array(
   'host' => 'localhost',
-  'dbname' => 'mvc_site',
+  'dbname' => 'db_name',
   'user' => 'root',
   'password' => '',
   'port' => 3308
