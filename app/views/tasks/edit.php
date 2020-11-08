@@ -1,4 +1,4 @@
-<? include ROOT . "/views/layouts/header.php" ?>
+<? include APP . "/views/layouts/header.php" ?>
 
 <main class="content">
   <div class="container">
@@ -47,4 +47,4 @@
   </div><!-- / .container -->
 </main>
 
-<? include ROOT . "/views/layouts/footer.php" ?>
+<? include APP . "/views/layouts/footer.php" ?>

@@ -1,4 +1,4 @@
-<? include ROOT . "/views/layouts/header.php" ?>
+<? include APP . "/views/layouts/header.php" ?>
 <?
   $isSortByName = $sort == 'user_name';
   $isSortByEmail = $sort == 'user_email';
@@ -71,10 +71,10 @@
                 <? if (User::checkAdmin()) { ?>
                   <div class="task-tools">
                     <a href="/tasks/edit/<?= $task['id'] ?>" class="button button-dark extra-small button-no-border">
-                      <img src="/template/img/edit.svg" width="20" alt="" title="Редактировать">
+                      <img src="<?= TEMPLATE ?>/img/edit.svg" width="20" alt="" title="Редактировать">
                     </a>
                     <a href="/tasks/delete/<?= $task['id'] ?>" class="button button-dark extra-small button-no-border">
-                    <img src="/template/img/delete.svg" width="20" alt="" title="Удалить">
+                    <img src="<?= TEMPLATE ?>/img/delete.svg" width="20" alt="" title="Удалить">
                     </a>
                   </div>
                 <? } ?>
@@ -96,4 +96,4 @@
   </div><!-- / .container -->
 </main>
 
-<? include ROOT . "/views/layouts/footer.php" ?>
+<? include APP . "/views/layouts/footer.php" ?>

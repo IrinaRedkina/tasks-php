@@ -47,7 +47,7 @@ class TaskController
     $total = Task::getTotalTasksCount();
     $pagination = new Pagination($total, $page, self::COUNT_TO_SHOW, 'page-');
 
-    require_once(ROOT . '/views/tasks/index.php');
+    require_once(APP . '/views/tasks/index.php');
     return true;
   }
 
@@ -72,7 +72,7 @@ class TaskController
       }
     }
 
-    require_once(ROOT . '/views/tasks/add.php');
+    require_once(APP . '/views/tasks/add.php');
     return true;
   }
 
@@ -107,7 +107,7 @@ class TaskController
       }
     }
 
-    require_once(ROOT . '/views/tasks/edit.php');
+    require_once(APP . '/views/tasks/edit.php');
     return true;
   }
 

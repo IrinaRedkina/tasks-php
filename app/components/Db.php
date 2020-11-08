@@ -5,7 +5,7 @@ class Db
 
   public static function getConnection()
   {
-    $paramsPath = ROOT . '/config/db_params.php';
+    $paramsPath = APP . '/config/db_params.php';
     $params = include($paramsPath);
 
     $dsn = "mysql:host={$params['host']};port={$params['port']};dbname={$params['dbname']}";

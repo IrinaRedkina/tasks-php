@@ -7,7 +7,7 @@ class Router
 
   public function __construct()
   {
-    $routesPath = ROOT . '/config/routes.php';
+    $routesPath = APP . '/config/routes.php';
     $this->routes = include($routesPath);
   }
 
@@ -18,7 +18,7 @@ class Router
   private function getURI()
   {
     if (!empty($_SERVER['REQUEST_URI'])) {
-      return trim($_SERVER['REQUEST_URI'], '/');
+      return trim(str_replace(BASE, '', $_SERVER['REQUEST_URI']), '/');
     }
   }
 
@@ -41,7 +41,7 @@ class Router
 
         $parameters = $segments;
 
-        $controllerFile = ROOT . '/controllers/' . $controllerName . '.php' ;
+        $controllerFile = APP . '/controllers/' . $controllerName . '.php' ;
 
         if (file_exists($controllerFile)) {
           include_once($controllerFile);
