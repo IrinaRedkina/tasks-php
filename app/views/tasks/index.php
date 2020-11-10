@@ -63,6 +63,9 @@
                   <span class="task-user"><?= $task['user_name'] ?></span>
                   <span class="task-email"><?= $task['user_email'] ?></span>
                 </div>
+                <div class="task-info-item">
+                  <b>статус:</b> <?= $task['status'] ? "выполнено" : "не выполнено" ?>
+                </div>
                 <? if ($task['edited']) { ?>
                   <div class="task-info-item">
                     <?= $task['edited'] ? "отредактировано администратором" : "" ?>
